@@ -78,16 +78,31 @@ body{
 }
 
 td{
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
+    font-size: 0px;
     text-align: center;
     border: 5px solid goldenrod;
     border-radius:20px;
-    font-size: 100px;
+    font-size: 60px;
     background-color: gray;
 }
 
 #startbtn{
+    font-size: 15px;
     background-color: red;
+
 }
 
+.clickable{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.clickable:hover{
+    font-size: 20px;
+}
+.clickable:focus{
+    color: blue;
+}
