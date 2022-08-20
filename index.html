@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1024">
     <title>Connect4</title>
-
+   
     <link rel="stylesheet" href="style.css" type="text/css">
 
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
-
+<script src="script.js"></script>
 </head>
 <body>
     
@@ -24,70 +23,76 @@
 
     </div>
 
+    
 
-    <div id="board">
+
+    <div id="scoreboard">
       
         <ul id="players">
-            <li style="color:rgb(36, 238, 181)">
-                P1: [<span id="p1name" contenteditable="true" >name?</span>]  &lt <span id="p1wins">2</span> wins
+            <li id = "p1Li" style="color:rgb(36, 238, 181)">
+                <span id="dot1">*</span> P1: [<span id="p1name" class="playername" contenteditable="true" >name?</span>]  &lt <span id="p1wins">2</span> wins
             </li>
-            <li style="color:rgb(211, 36, 238)">
-                P2: [<span id="p2name" contenteditable="true" >name?</span>]  &lt <span id="p1wins">0</span> wins
+            <li id= "p2Li" style="color:rgb(211, 36, 238)">
+               <span id="dot2">*</span> P2: [<span id="p2name" class="playername" contenteditable="true" >name?</span>]  &lt <span id="p1wins">0</span> wins
             </li>
         </ul>
 
         
             
     </div>
+    <div class="alert" id="noeditalert"> &gt कार्रवाई की अनुमति नहीं है </div>
     <div style="position:fixed; bottom:1%; right: 1%;">
-        <code > &gt {r: <span id="nrow" contenteditable="true" >5</span>; col: <span id="ncol" contenteditable="true" >5</span>}</code><br>
+        <code > &gt {row: <span id="nrow" contenteditable="true" >5</span>; col: <span id="ncol" contenteditable="true" >5</span>}</code><br>
         <code > &gt Press Ctrl + R  for restart</code> 
         
     </div>
 
 
-    <div class="connect4">
+    <div id="connect4">
         <table align="center">
-            <tr>
-                <td>s</td>
-                <td>p</td>
-                <td>q</td>
-                <td>r</td>
-                <td>m</td>
+            
+            <tr class="row1">
+                <td class="col1">s</td>
+                <td class="col2">p</td>
+                <td class="col3">q</td>
+                <td class="col4">r</td>
+                <td class="col5">m</td>
             </tr>
             <tr>
-                <td>s</td>
-                <td>p</td>
-                <td>q</td>
-                <td>r</td>
-                <td>m</td>
+                <td class="col1">s</td>
+                <td class="col2">p</td>
+                <td class="col3">q</td>
+                <td class="col4">r</td>
+                <td class="col5">m</td>
             </tr>
             <tr>
-                <td>s</td>
-                <td>t</td>
-                <td id="startbtn" onclick="init()"><a href="#" class="clickable">A</a></td>
-                <td>r</td>
-                <td>t</td>
+                <td class="col1">s</td>
+                <td class="col2">p</td>
+                <td  class="col3" id="startbtn" onclick="init()"><a href="#" class="clickable">A</a></td>
+                <td class="col4">r</td>
+                <td class="col5">m</td>
             </tr>
             <tr>
-                <td>s</td>
-                <td>p</td>
-                <td>q</td>
-                <td>r</td>
-                <td>m</td>
+                <td class="col1">s</td>
+                <td class="col2">p</td>
+                <td class="col3">q</td>
+                <td class="col4">r</td>
+                <td class="col5">m</td>
             </tr>
             <tr>
-                <td>r</td>
-                <td>o</td>
-                <td>y</td>
-                <td>q</td>
-                <td>v</td>
+                <td class="col1">s</td>
+                <td class="col2">p</td>
+                <td class="col3">q</td>
+                <td class="col4">r</td>
+                <td class="col5">m</td>
             </tr>
   
         </table>
     </div>
     
     
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     
 </body>
 </html>
