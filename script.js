@@ -121,6 +121,10 @@ function colorAssign(event) {
 };
 
 function playerAssign(){
+    let index = parseInt(this.id);
+    if(board[index]===1){
+        return;
+    }
     let corners = [0, row*col-1, col-1, row*(col-1)];
     setTimeout(()=>{
 
